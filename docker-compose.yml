@@ -8,7 +8,7 @@ services:
       - NODE_ENV=production
       - N8N_HOST=${N8N_HOST}
       - N8N_PORT=${N8N_PORT}
-      - N8N_PROTOCOL=https
+      - N8N_PROTOCOL=http
       # Database
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
@@ -19,11 +19,11 @@ services:
       - N8N_PERSONALIZATION_ENABLED=true
       - N8N_ENCRYPTION_KEY=${ENCRYPTION_KEY}
       - N8N_USER_MANAGEMENT_JWT_SECRET
-      - N8N_SECURE_COOKIE=true
+      - N8N_SECURE_COOKIE=false
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
       - N8N_BLOCK_ENV_ACCESS_IN_NODE=true
       - N8N_PROXY_HOPS=${PROXY_HOPS:-1}
-      - WEBHOOK_URL=https://${N8N_HOST}/
+      - WEBHOOK_URL=https://${N8N_HOST}:5678/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
       - N8N_TEMPLATES_ENABLED=true
       - N8N_HIRING_BANNER_ENABLED=false
