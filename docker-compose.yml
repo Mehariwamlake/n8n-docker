@@ -144,3 +144,4 @@ volumes:
   postgres_storage:
   ollama_storage:
   redis_storage:
+  
